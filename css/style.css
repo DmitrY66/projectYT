@@ -76,6 +76,7 @@ body {
   padding-right: 17px;
   max-width: 830px;
   width: 50%;
+  margin-right: 40px;
 }
 
 .input-search {
@@ -138,7 +139,7 @@ body {
 
 .sidebar {
   position: fixed;
-  width: 12%;
+  width: 200px;
   top: 114px;
   left: 0;
   height: calc(100% - 114px);
@@ -151,8 +152,9 @@ body {
   width: 100%;
   height: 400px;
   margin-top: 85px;
-  padding-left: 13%;
+  padding-left: 250px;
   padding-top: 30px;
+  padding-right: 70px;
   /* background: red */
 }
 
@@ -203,7 +205,7 @@ body {
 .channel {
   position: relative;
   margin-bottom: 49px;
-  width: 110%;
+  width: 100%;
 }
 
 .channel-title {
@@ -229,19 +231,46 @@ body {
   margin-left: 20px;
 }
 
-/* =============================== */
+.channel-text-small {
+  font-size: 16px;
+  font-weight: 400;
+  color: #c2c2c2;
+  margin-left: 20px;
+  margin-bottom: -16px;
+}
+
+.subscribe_23m {
+  position: absolute;
+  font-size: 16px;
+  color: #ffffff;
+  background: #ff0000;
+  border-radius: 28px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 22px;
+  padding-left: 22px;
+  right: 10%;
+  top: 7px;
+  cursor: pointer;
+  border: none;
+}
+
+.subscribe_23m:hover {
+  background: #e75858;
+  transition: 0.6s;
+}
 
 .video-card {
-  width: 250px;
+  width: 100%;
 }
 
 .video-card-big {
-  width: 540px;
+  width: 100%;
 }
 
 .video-thumb {
   position: relative;
-  width: 250px;
+  width: 100%;
   height: 150px;
   overflow: hidden;
   border-radius: 4px;
@@ -249,20 +278,20 @@ body {
 
 .video-thumb-big {
   position: relative;
-  width: 540px;
+  width: 100%;
   height: 250px;
   overflow: hidden;
   border-radius: 4px;
 }
 
 .thumbnail {
-  width: 250px;
+  width: 100%;
   height: 150px;
   object-fit: cover;
 }
 
 .thumbnail-big {
-  width: 540px;
+  width: 100%;
   height: 250px;
   object-fit: cover;
 }
@@ -322,10 +351,132 @@ body {
 
 .slider-buttons {
   position: absolute;
-  right: 12%;
+  right: 0;
   top: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 66px;
+  /* background: #f88181; */
+}
+
+.mobile-sidebar {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+}
+
+.mobile-search {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .subscribe_23m {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 1140px) {
+  .subscribe_23m {
+    display: none;
+  }
+}
+
+@media (max-width: 880px) {
+  .icons {
+    display: none;
+  }
+
+  .channel-text-small {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 32px;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .swiper-slide {
+    margin-bottom: 40px;
+  }
+
+  .video-thumb {
+    height: 300px;
+  }
+
+  .thumbnail {
+    height: 300px;
+  }
+
+  .slider-buttons {
+    display: none;
+  }
+
+  .content {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .mobile-sidebar {
+    display: block;
+  }
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 0;
+    padding-top: 13px;
+    padding-bottom: 11px;
+    border-top: 1px solid #f1f1f1;
+  }
+  .nav-text {
+    margin-left: 0;
+    font-size: 10px;
+  }
+
+  .nav-item {
+    margin-bottom: 0;
+  }
+
+  .input-group {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    opacity: 0;
+    width: 72%;
+    margin-left: 32px;
+    transition: top 0.6s;
+  }
+
+  .is-open {
+    opacity: 1;
+    top: 68px;
+  }
+
+  .mobile-search {
+    display: block;
+    margin-left: auto;
+  }
 }
